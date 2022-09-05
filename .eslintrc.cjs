@@ -10,6 +10,7 @@ module.exports = {
   ignorePatterns: ['build', 'node_modules', 'types.generated.ts'],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    camelcase: 0,
     '@typescript-eslint/semi': ['error', 'never'],
     'import/extensions': 0,
     'import/prefer-default-export': 0,
@@ -30,7 +31,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.ts'],
       },
     },
   },
