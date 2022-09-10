@@ -1,6 +1,6 @@
 {
   "name": "@jathanasiou/sleeper-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "exports": "./index.js",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/jameson-athanasiou/sleeper-api/issues"
   },
-  "files": ["/dist", "/src", "/node_modules", "package.json", "tsconfig.json", "package-lock.json"],
+  "files": ["/dist", "/src", "package.json", "tsconfig.json"],
   "dependencies": {
     "axios": "^0.27.2"  },
   "devDependencies": {
