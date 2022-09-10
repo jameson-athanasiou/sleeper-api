@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/jameson-athanasiou/sleeper-api/issues"
   },
+  "files": ["/dist", "/src", "/node_modules", "package.json", "tsconfig.json", "package-lock.json"],
   "dependencies": {
     "axios": "^0.27.2"  },
   "devDependencies": {
