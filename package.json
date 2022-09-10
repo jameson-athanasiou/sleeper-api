@@ -1,12 +1,23 @@
 {
-  "name": "sleeper-api",
-  "version": "1.0.0",
+  "name": "@jathanasiou/sleeper-api",
+  "version": "0.0.1",
   "description": "",
   "exports": "./index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
     "node": "^18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameson-athanasiou/sleeper-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/jameson-athanasiou/sleeper-api#readme",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jameson-athanasiou/sleeper-api/issues"
   },
   "dependencies": {
     "axios": "^0.27.2"  },
@@ -28,17 +39,6 @@
     "build": "tsc",
     "static-test": "node --inspect --loader ts-node/esm --experimental-specifier-resolution=node",
     "test-harness": "node --inspect --loader ts-node/esm --experimental-specifier-resolution=node ./test/test.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jameson-athanasiou/sleeper-api.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jameson-athanasiou/sleeper-api/issues"
-  },
-  "homepage": "https://github.com/jameson-athanasiou/sleeper-api#readme",
-  "type": "module"
+    "test": "echo \"No tests written yet!\" && exit 0"
+  }
 }
