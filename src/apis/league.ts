@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { baseUrlV1 } from './config'
+import { baseUrlV1 } from '../config'
 
 type MatchupType = {
   custom_points: string | null
@@ -34,4 +34,16 @@ export const getHeadToHeadMatchupsByWeek = async (leagueId: string, week: number
   }
 
   return headToHeadMatchups
+}
+
+export const getLeagueDetails = async (leagueId: string) => {
+  const url = `${baseUrl}/${leagueId}`
+  const result = await axios.get(url)
+  return result.data
+}
+
+export const getRosters = async (leagueId: string) => {
+  const url = `${baseUrl}/${leagueId}/rosters`
+  const result = await axios.get(url)
+  return result.data
 }
