@@ -13,13 +13,13 @@ export type GetUserById = (userId: string) => Promise<IndividualUser>
 
 const baseUrl = `${baseUrlV1}/user`
 
-export const getUserByUsername = async (username: string) => {
+export const getUserByUsername: GetUserByUsername = async (username) => {
   const url = `${baseUrl}/${username}`
   const result = await axios.get(url)
   return result.data
 }
 
-export const getUserById = async (userId: string) => {
+export const getUserById: GetUserById = async (userId) => {
   const url = `${baseUrl}/${userId}`
   const result = await axios.get(url)
   return result.data

@@ -1,8 +1,8 @@
 {
   "name": "@jathanasiou/sleeper-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
-  "exports": "./index.js",
+  "exports": "./dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {

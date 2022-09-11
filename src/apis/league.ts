@@ -65,6 +65,7 @@ export type User = {
 }
 
 export type GetMatchupsByWeek = (leagueId: string, week: number) => Promise<Matchup[]>
+export type getHeadToHeadMatchupsByWeek = (leagueId: string, week: number) => Promise<Matchup[][]>
 export type GetLeagueDetails = (leagueId: string) => Promise<LeagueDetails>
 export type GetRosters = (leagueId: string) => Promise<Roster[]>
 export type GetUsersByLeague = (leagueId: string) => Promise<User[]>
@@ -77,7 +78,7 @@ export const getMatchupsByWeek: GetMatchupsByWeek = async (leagueId, week) => {
   return result.data
 }
 
-export const getHeadToHeadMatchupsByWeek = async (leagueId: string, week: number) => {
+export const getHeadToHeadMatchupsByWeek: getHeadToHeadMatchupsByWeek = async (leagueId, week) => {
   const matchups = await getMatchupsByWeek(leagueId, week)
   const matchupsCount = matchups.length / 2
 
@@ -91,19 +92,19 @@ export const getHeadToHeadMatchupsByWeek = async (leagueId: string, week: number
   return headToHeadMatchups
 }
 
-export const getLeagueDetails: GetLeagueDetails = async (leagueId: string) => {
+export const getLeagueDetails: GetLeagueDetails = async (leagueId) => {
   const url = `${baseUrl}/${leagueId}`
   const result = await axios.get(url)
   return result.data
 }
 
-export const getRosters = async (leagueId: string) => {
+export const getRosters: GetRosters = async (leagueId) => {
   const url = `${baseUrl}/${leagueId}/rosters`
   const result = await axios.get(url)
   return result.data
 }
 
-export const getUsersByLeague = async (leagueId: string) => {
+export const getUsersByLeague: GetUsersByLeague = async (leagueId) => {
   const url = `${baseUrl}/${leagueId}/users`
   const result = await axios.get(url)
   return result.data
