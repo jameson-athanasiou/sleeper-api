@@ -12,6 +12,8 @@ module.exports = {
   rules: {
     camelcase: 0,
     '@typescript-eslint/semi': ['error', 'never'],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     'import/extensions': 0,
     'import/prefer-default-export': 0,
     indent: ['error', 2],
